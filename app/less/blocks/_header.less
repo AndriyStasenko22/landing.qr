@@ -1,15 +1,12 @@
 header{
-	height: 750px;
+	height: 85vh;
 	background: url('../../img/main_top_bg.jpg') center center no-repeat;
 	background-size: cover;
-	position: relative;
 	.header_image{
-		position: absolute;
-		top: 35%;
-		left: 0;
-		display: inline-block;
-		padding-left: 15%;
-
+		transform: translateY(35%);
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
 	}
 	.container_wrap{
 		color: #fff;
@@ -79,12 +76,12 @@ header{
 }
 @keyframes anim_image{
 	0%{
-		top: -100%;
+		transform: translateY(-100%);
 	}
 	50%{
-		top: 43%;
+		transform: translateY(43%);
 	}
 	100%{
-		top: 35%;
+		transform: translateY(35%);
 	}
 }

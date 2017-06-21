@@ -11,7 +11,10 @@ html
 			.container-fluid
 				.container_wrap
 					.row
-						.col-xs-7.col-sm-7.col-md-7.col-lg-7.col-sm-offset-5
+						.col-xs-5.col-sm-5.col-md-5.col-lg-5
+							.header_image.wow.animImage(data-wow-delay="0.5s" data-wow-duration="2s")
+								img(src='img/iphone-white-1.png')
+						.col-xs-7.col-sm-7.col-md-7.col-lg-7
 							h1.header-title Мобильная карта клиента
 							ul.header-list
 								li #[span 5] оснований, чтобы сменить систему начисления скидок
@@ -29,8 +32,7 @@ html
 								li
 									.header-list-item.wow.fadeIn(data-wow-delay="4.1s") #[span 5] реферальная система
 									#[.header-list-line.wow.drawLine(data-wow-delay="3.6s")]
-				.header_image.wow.animImage(data-wow-delay="0.5s" data-wow-duration="2s")
-						img(src='img/iphone-white-1.png')
+
 		// головне меню
 		section.navbar
 			.container-fluid
@@ -149,7 +151,7 @@ html
 									li новостная лента;
 									li информация о компании, адреса и телефоны филиалов, фотографии, адреса сайтов.
 							.application_button
-								a(href='#' ): img(src='img/google-play-badge.png')						
+								a(href='#'): img(src='img/google-play-badge.png')						
 		// футер сайту
 		footer
 	script(src="js/libs.min.js")
