@@ -1,6 +1,34 @@
 .navbar{
 	margin-bottom: 0;
 	height: 70px;
-	background-color: @navbar_color;
+	line-height: 69px;
+	background-color: rgba(39,50,61, .3);
 	border-radius: 0px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	transition: all 0.3s;
+	.container_wrap{
+		padding: 0 10%;
+	}
+	.navbar_logo{
+		float: left;
+	}
+	.menu{
+		float: right;
+		li{
+			display: inline-block;
+			a{
+				color: #fff;
+				text-transform: uppercase;
+				padding: 0 10px;
+				display: inline-block;
+				&:hover{
+					color: @base_color;
+				}
+			}
+		}
+	}
 }

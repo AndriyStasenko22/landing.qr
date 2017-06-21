@@ -1,0 +1,156 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title CompLife.QR
+		link(rel="stylesheet" href="css/main.css")
+	body
+		// шапка сайту
+		header
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-7.col-sm-7.col-md-7.col-lg-7.col-sm-offset-5
+							h1.header-title Мобильная карта клиента
+							ul.header-list
+								li #[span 5] оснований, чтобы сменить систему начисления скидок
+								li
+									.header-list-item.wow.fadeIn(data-wow-delay="0.5s") #[span 1] всегда с клиентом
+								li
+									.header-list-item.wow.fadeIn(data-wow-delay="1.3s") #[span 2] возможность напомнить о себе
+									#[.header-list-line.wow.drawLine(data-wow-delay="0.9s")]
+								li
+									.header-list-item.wow.fadeIn(data-wow-delay="2.2s") #[span 3] клиент всегда вкурсе о накопленных средствах
+									#[.header-list-line.wow.drawLine(data-wow-delay="1.7s")]
+								li
+									.header-list-item.wow.fadeIn(data-wow-delay="3.1s") #[span 4] быстрая окупаемость
+									#[.header-list-line.wow.drawLine(data-wow-delay="2.6s")]
+								li
+									.header-list-item.wow.fadeIn(data-wow-delay="4.1s") #[span 5] реферальная система
+									#[.header-list-line.wow.drawLine(data-wow-delay="3.6s")]
+				.header_image.wow.animImage(data-wow-delay="0.5s" data-wow-duration="2s")
+						img(src='img/iphone-white-1.png')
+		// головне меню
+		section.navbar
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-12.col-sm-12.col-md-12.col-lg-12
+							.navbar_logo
+								a.logo(href="index.html")
+									img(src='img/logo.png')
+							ul.menu
+								li: a.active(href='header') ГЛАВНАЯ
+								li: a(href='.whatsit') ПРЕИМУЩЕСТВА
+								li: a(href='.services') ФУНКЦИОНАЛЬНОСТЬ
+								li: a(href='#') ДЕМО-ВЕРСИЯ
+								li: a(href='#') КОНТАКТЫ
+
+		// переваги
+		section.whatsit
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-12.col-sm-12.col-md-12.col-lg-12
+							.wrap_title
+								h1.title Будьте современными
+								h3.short_info Смените пластиковые карты на мобильную версию
+								
+						.col-sm-3.col-md-3.col-lg-3
+							ul.whatsit_list
+								li Всегда под рукой у ваших клиентов
+								li #[span Повышайте свой имидж] предоставляя клиенту новый сервис
+								li #[span Экономически выгоднее] дисконтной программы
+
+						.col-sm-6.col-md-6.col-lg-6
+							.whatsit_foto
+								img(src="img/baners/whatsit.png")
+
+						.col-sm-3.col-md-3.col-lg-3
+							ul.whatsit_list
+								li Дает возможность #[span выделиться на фоне конкурентов]
+								li Включает в себя дополнительный канал коммуникации с клиентами
+								li Создает #[span современный и технологичный образ]
+		// возможности
+		section.services
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-12.col-sm-12.col-md-12.col-lg-12
+							.wrap_title
+								h1.title Возможности системы
+						.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.whatsit_foto
+								img(src="img/baners/message.png")
+
+						.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							ul.wrap_list
+								li Просмотр #[span текущего баланса] клиента
+								li Push-уведомления
+								li Возможность пользователя копить баллы со своих покупок
+								li Новостная лента
+								li Реферальная система
+		// CompLifeQR 
+		section.application
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.whatsit_foto
+								img(src="img/baners/message.png")
+
+						.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.application_info
+								.application_title.clearfix
+									h1 CompLifeQR
+
+								.application_description
+									h4 Мобильное приложение для любого вида бизнеса, которое включает в себя следующие функции:
+								
+								ul.application_function
+									li программа лояльности для клиентов, которая позволяет:
+										ul
+											li предоставлять скидку пользователям;
+											li начислять пользователям бонусные баллы за покупки;
+											li приглашать друзей в приложение и получать бонусные баллы за покупки друзей;
+									li новостная лента;
+									li информация о компании, адреса и телефоны филиалов, фотографии, адреса сайтов.
+							.application_button
+								a(href='#' ): img(src='img/google-play-badge.png')
+
+		// що отримаєте
+		section.result
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-12.col-sm-12.col-md-12.col-lg-12
+							.wrap_title
+								h1.title Возможности системы
+
+						.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.whatsit_foto
+								img(src="../img/mockup.png")
+
+						.col-xs-6.col-sm-6.col-md-6.col-lg-6
+							.application_info
+								.application_title.clearfix
+									h1 CompLifeQR
+
+								.application_description
+									h4 Мобильное приложение для любого вида бизнеса, которое включает в себя следующие функции:
+								
+								ul.application_function
+									li программа лояльности для клиентов, которая позволяет:
+										ul
+											li предоставлять скидку пользователям;
+											li начислять пользователям бонусные баллы за покупки;
+											li приглашать друзей в приложение и получать бонусные баллы за покупки друзей;
+									li новостная лента;
+									li информация о компании, адреса и телефоны филиалов, фотографии, адреса сайтов.
+							.application_button
+								a(href='#' ): img(src='img/google-play-badge.png')						
+		// футер сайту
+		footer
+	script(src="js/libs.min.js")
+	script(src="js/comon.js")

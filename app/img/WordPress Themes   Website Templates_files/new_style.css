@@ -1,0 +1,560 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+@font-face {
+    font-family: 'helveticaneuecyrroman';
+    src: url('helveticaneuecyr-roman-webfont.woff2') format('woff2'),
+    url('helveticaneuecyr-roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    overflow: hidden;
+}
+
+#switcher {
+    background: url("/selector/new/bg.jpg");
+    background-size: cover;
+    min-height: 49px;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #605e68;
+}
+
+#theme_select {
+    margin: 0 0 0 17px;
+    width: 225px;
+    height: 23px;
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px #92aee4 solid;
+    border-radius: 3px;
+    margin-top: 11px;
+    position: relative;
+    transition: border-color 200ms;
+}
+
+#theme_select:after {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    content: "\f0dc";
+    font-family: 'FontAwesome', sans-serif;
+}
+
+.tfstyle #theme_select:after {
+    line-height: 13px;
+}
+
+.tfstyle #theme_select {
+    margin-top:16px !important;
+    border: 1px #ffffff solid;
+}
+
+#theme_select:hover, #theme_select.active {
+    border-color: #FFFFFF;
+}
+
+#theme_select span.fl {
+    color: #fff;
+    display: block;
+    font-family: 'helveticaneuecyrroman', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    margin-left: 9px;
+    line-height: 22px;
+    padding-top: 1px;
+    text-transform: none;
+    height: 22px;
+    max-width: 225px;
+    overflow: hidden;
+    float: left;
+}
+
+.gt3_btn i {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+.remove_frame i {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+#theme_select .fr {
+    display: none;
+}
+
+#theme_select img {
+    display: none !important;
+}
+
+.gt3_btn a {
+    display: block;
+    transition: background-color 200ms;
+    line-height: 22px;
+    background-color: #f83939;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'helveticaneuecyrroman', sans-serif;
+    padding: 2px 20px 1px 20px;
+    border-radius: 3px;
+}
+
+.gt3_btn a:hover {
+    background-color: #f64c4c;
+}
+
+li.purchase,
+li.socials {
+    float: right !important;
+}
+
+li.remove_frame {
+    padding-right: 17px !important;
+    float: right !important;
+    padding-left: 13px !important;
+}
+
+li.remove_frame a {
+    background-color: transparent;
+    border: 1px #a6d3ea solid;
+    display: block;
+    padding: 0;
+    transition: background-color 250ms;
+    line-height: 22px;
+    border-radius: 3px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'helveticaneuecyrroman', sans-serif;
+    padding: 1px 20px 0px 20px;
+    transition: border-color 200ms;
+}
+
+li.remove_frame:hover a {
+    border-color: #ffffff;
+}
+
+.remove_frame, .gt3_btn {
+    margin-top: 11px;
+}
+
+.socials_block {
+    border: 1px #616773 solid;
+    margin-top: 8px;
+    border-radius: 3px;
+    padding: 11px 0 0 10px;
+    height: 30px;
+}
+
+.soc_item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 7px;
+}
+
+#iframe {
+    margin-top: 49px;
+}
+
+.logo img {
+    margin: 14px 3px 0 19px;
+    transition: opacity 250ms;
+    -webkit-transition: opacity 250ms;
+    width: 107px;
+    height: 22px;
+}
+
+.logo a:hover img {
+    opacity: 0.7;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+.online_chat a {
+    background-image: url(live_chat.png);
+    background-position: 14px 12px;
+    padding-left: 45px;
+}
+
+.center {
+    width: 100%;
+}
+
+.center ul li {
+    display: inline;
+    float: left;
+    position: relative;
+    padding-right: 8px;
+}
+
+.advanced_templates_block {
+    visibility: hidden;
+    position: absolute;
+    background: #fcfcfc;
+    border: 1px #e7e7e7 solid;
+    border-top: 0;
+    padding: 10px 8px 16px 9px;
+    /*width: 176px;*/
+    width: 208px;
+    left: 17px;
+}
+
+.tfstyle .advanced_templates_block {
+    left: 212px;
+    width: 225px;
+}
+
+.tfstyle .previmg_cont {
+    left: 455px;
+}
+
+.html_section.templs_li_block {
+    border-right: 0;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.c_lear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+}
+
+.templs_li_block {
+    width: 228px;
+    height: 347px;
+    margin-right: 19px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.templs_in {
+    height: 347px;
+}
+
+.templs_li_block h3 {
+    position: absolute;
+    width: 90%;
+    display: block;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 9999;
+    line-height: 18px;
+    padding: 0 0 5px 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #605e68;
+    font-size: 14px;
+    text-transform: none;
+}
+
+.templs_li_block ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+.templs_li_block ul li {
+    padding: 2px 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    display: block !important;
+    float: none !important;
+    height: auto !important;
+    line-height: 18px !important;
+    vertical-align: top;
+}
+
+.templs_li_block li a {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none;
+    line-height: 18px;
+    color: #5c6b7e;
+    font-family: 'helveticaneuecyrroman', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: none;
+}
+
+.templs_li_block li a {
+    vertical-align: top;
+    outline: none;
+    margin-left: 9px !important;
+    border-bottom: 1px solid #e7e9ea;
+    display: block;
+    position: relative;
+    max-width: 186px;
+    padding: 8px 0 10px 0 !important;
+}
+
+.templs_li_block li:last-child a {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.templs_li_block li:first-child a {
+    padding-top: 0 !important;
+}
+
+.show_product_type {
+    float: right;
+    display: inline-block;
+    background: #d8d9db;
+    font-family: 'helveticaneuecyrroman', sans-serif;
+    font-size: 10px !important;
+    line-height: 18px !important;
+    color: #ffffff !important;
+    border-radius: 3px;
+    padding: 0 3px !important;
+}
+
+.templs_li_block li a:hover span.show_product_type {
+    color: #ffffff !important;
+    background: #21759b;
+}
+
+.templs_li_block li a:hover,
+.templs_li_block li a:hover span {
+    color: #00b41e !important;
+}
+
+.templs_li_block li a:before {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 7px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+.templs_li_block li a:hover:before {
+    background-position: 0 -22px;
+}
+
+.previmg_cont {
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+    /*left: 243px;*/
+    left: 262px;
+    top: 73px;
+    position: absolute;
+    z-index: 15000;
+    border: 0;
+    overflow: hidden;
+    transition: all 550ms;
+}
+
+.previmg_cont.active {
+    width: 590px;
+    height: 300px;
+}
+
+.top_selling_block {
+    width: 298px;
+    float: right;
+    padding-left: 1px;
+}
+
+.top_selling_block h3 {
+    line-height: 18px;
+    padding: 0 0 4px 0;
+    margin: 0;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #605e68;
+    font-size: 14px;
+    text-transform: none;
+}
+
+.top_selling_block img {
+    max-width: 100%;
+    margin: 11px 11px 0 0;
+    float: left;
+}
+
+.top_selling_block .fl, .top_selling_block .fr {
+    display: none !important;
+}
+
+.product_list_divider {
+    display: none;
+}
+
+.skype_btn {
+    float: right !important;
+}
+
+.skype_btn a {
+    display: block;
+    margin-top: 12px;
+}
+
+.skype_btn img {
+    margin: 0 !important;
+    vertical-align: 0 !important;
+}
+
+body.size-preview-enable {
+    background: url("/selector/new/sizes-bg.png");
+    background-repeat: repeat;
+}
+
+.mobile_testing {
+    float: right !important;
+    margin-top: 11px;
+    margin-right: 8px;
+}
+
+.mobile_testing i {
+    font-size: 26px;
+    display: inline-block;
+    color: #a8d5eb;
+    margin-right: 13px;;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.mobile_testing i:hover, .mobile_testing i.active {
+    color: #fff;
+}
+
+iframe.size-tablet {
+    width: 768px;
+    margin: 0 auto !important;
+    display: block;
+    padding-top: 49px;
+}
+
+iframe.size-mobile {
+    width: 375px;
+    margin: 0 auto !important;
+    display: block;
+    padding-top: 49px;
+}
+
+#iframe {
+    transition: width 200ms;
+}
+
+.gt3ifr {
+    margin-top: 0!important;
+}
+
+.tfstyle .headlines {
+    float: left;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+    .logo {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logo,
+    .socIcons,
+    .online_chat,
+    .previmg_cont,
+    .online_chat a,
+    .banner_hosting a,
+    .mobile_testing {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 610px) {
+    .remove_frame a, .gt3_btn a {
+        text-indent: -10000px;
+        width: 5px !important;
+    }
+}
+
+.retina_logo {
+    display: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .default_logo {
+        display: none;
+    }
+
+    .retina_logo {
+        display: block;
+    }
+}

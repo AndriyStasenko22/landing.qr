@@ -1,10 +1,11 @@
 var gulp = require('gulp'), // Подключаем gulp
-	less = require('gulp-less'), // Подключаем gulp-less
-	browserSync = require('browser-sync'); // Подключаем Browser Sync
+	less = require('gulp-less'), // Подключаем Less
+	browserSync = require('browser-sync'), // Подключаем Browser Sync
 	concat      = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-    uglify      = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
-	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+    uglify      = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
+	autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
     cssnano     = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
+    jade = require('gulp-jade'); // Подключаем пакет для минификации Jade
 
 // Таск "LESS"
 gulp.task('less', function(){
@@ -44,6 +45,16 @@ gulp.task('browser-sync', function() {
         notify: false // Отключаем уведомления
     });
 });
+// Таск "Jade"
+gulp.task('jade', function() {
+    return gulp.src('app/jade/**/**.jade')
+        .pipe(jade({
+            pretty: true
+        }))
+        .on('error', console.log) // Выводим ошибки в консоль
+        .pipe(gulp.dest('app/')) // указываем gulp куда положить скомпилированные HTML файлы
+        .pipe(browserSync.reload({stream: true}));
+    });
 
 // gulp.task('icons', function() {
 //   return gulp.src(config.bowerDir + '/app/libs/font-awesome/fonts/**.*')
@@ -51,10 +62,11 @@ gulp.task('browser-sync', function() {
 // });
 
 // Таск "watch"
-gulp.task('watch', ['browser-sync', 'less', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'less', 'scripts', 'jade'], function() {
     gulp.watch('app/less/**/*.less', ['less']); // Наблюдение за less файлами
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
+    gulp.watch('app/jade/**/*.jade', ['jade']); // Наблюдение за less файлами
 });
 
 gulp.task('default', ['watch']);

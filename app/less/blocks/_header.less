@@ -1,7 +1,90 @@
 header{
-	height: 800px;
-	background: url('../img/baners/home-bg.jpg') center center no-repeat;
+	height: 750px;
+	background: url('../../img/main_top_bg.jpg') center center no-repeat;
 	background-size: cover;
-	color: #fff;
 	position: relative;
+	.header_image{
+		position: absolute;
+		top: 35%;
+		left: 0;
+		display: inline-block;
+		padding-left: 15%;
+
+	}
+	.container_wrap{
+		color: #fff;
+	}
+	.header-title{
+		font-size: 55px;
+		text-align: center;
+		margin: 40px 0;
+	}
+	.header-list{
+		li{
+			margin-top: 25px;
+			font-size: 18px;
+			position: relative;
+			line-height: 48px;
+			&:first-child{
+				line-height: 78px;
+				font-size: 24px;
+				span{ 
+					width: 70px;
+					height: 70px;
+					line-height: 68px;
+					vertical-align: middle;
+					font-size: 40px;
+					margin: 0 15px 0 0;
+				}
+			}
+			span{
+				display: inline-block;
+				height: 50px;
+				width: 50px;
+				border-radius: 50%;
+				border: 2px solid  #fff;
+				background-color: @base_color;
+				text-align: center;
+				line-height: 48px;
+				font-weight: bold;
+				font-size: 20px;
+				margin: 0 10px;
+				vertical-align: middle;
+			}
+			.header-list-line{
+				width: 2px;
+				height: 28px;
+				background-color: #fff;
+				position: absolute;
+				top: -27px;
+				left: 34px;
+			}
+		}
+	}
+}
+.drawLine {
+	animation-name: draw_line;
+	animation-duration: .5s;
+}
+@keyframes draw_line{
+	0%{
+		height: 0;
+	}
+	100%{
+		height: 27px;
+	}
+}
+.animImage {
+	animation-name: anim_image;
+}
+@keyframes anim_image{
+	0%{
+		top: -100%;
+	}
+	50%{
+		top: 43%;
+	}
+	100%{
+		top: 35%;
+	}
 }

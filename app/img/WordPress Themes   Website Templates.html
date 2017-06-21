@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://gt3demo.com/?theme=Wicon%20WP -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>WordPress Themes &nbsp; Website Templates</title>
+        <meta name="description" content="The most easy to use WordPress Themes and website templates. Responsive, highly performance, coded with SEO in mind and much more.">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./WordPress Themes   Website Templates_files/new_style.css" rel="stylesheet" media="all">
+        <link href="./WordPress Themes   Website Templates_files/font-awesome.css" rel="stylesheet" media="all">
+        <link href="./WordPress Themes   Website Templates_files/css" rel="stylesheet" type="text/css">
+        <link href="./WordPress Themes   Website Templates_files/jquery.jscrollpane.css" rel="stylesheet" media="all">
+
+    <link href="./WordPress Themes   Website Templates_files/normalize.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./WordPress Themes   Website Templates_files/themeforest.css" media="all" rel="stylesheet" type="text/css">
+
+        <script async="" src="./WordPress Themes   Website Templates_files/analytics.js.Без названия"></script><script type="text/javascript" src="./WordPress Themes   Website Templates_files/jquery-1.4.2.min.js.Без названия"></script>
+        <script type="text/javascript" src="./WordPress Themes   Website Templates_files/jquery.mousewheel.js.Без названия"></script>
+        <script type="text/javascript" src="./WordPress Themes   Website Templates_files/jquery.jscrollpane.min.js.Без названия"></script>
+        <script type="text/javascript">
+            var theme_list_open = false;
+
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.location = 'http://gt3demo.com/wp/wicon/';
+            }
+
+            $(document).ready(function () {
+                function fixHeight() {
+                    var headerHeight = $("#switcher, .preview__header").height();
+                    $("#iframe").attr("height", (($(window).height()) - headerHeight));
+                }
+
+                $(window).resize(function () {
+                    fixHeight();
+                }).resize();
+
+//                $("#theme_select").click(function () {
+//                    if (theme_list_open == true) {
+//                        $(".advanced_templates_block").css("visibility", "hidden");
+//                        theme_list_open = false;
+//                    } else {
+//                        $(".advanced_templates_block").css("visibility", "visible");
+//                        theme_list_open = true;
+//                    }
+//                    $(this).toggleClass("active");
+//                    return false;
+//                });
+
+                $("iframe").hover(
+                    function() {
+                        $(".advanced_templates_block").css("visibility", "hidden");
+                        theme_list_open = false;
+                        $(this).removeClass("active");
+                    }, function() {
+                    }
+                );
+
+                $("#theme_select").hover(
+                    function() {
+                        $(".advanced_templates_block").css("visibility", "visible");
+                        theme_list_open = true;
+                        $(this).addClass("active");
+                    }, function() {
+                    }
+                );
+
+                $("#theme_list ul li a, a.top_sell").click(function () {
+                    var theme_data = $(this).attr("rel").split(",");
+                    var nowurl = theme_data[1] + "?ref=GT3themes&license=regular&open_purchase_for_item_id=" + $(this).attr("data-tfitemid");
+                    $("li.purchase a, .purch_no_design").attr("href", nowurl);
+                    $("li.remove_frame a, .remove_no_design").attr("href", theme_data[0]);
+                    $("#iframe").attr("src", theme_data[0]);
+                    $("#theme_list a#theme_select").html($(this).html());
+                    $(".advanced_templates_block").css("visibility", "hidden");
+                    $(".previmg_cont").css("visibility", "hidden");
+                    $(".previmg").remove();
+                    theme_list_open = false;
+                    return false;
+                });
+
+                /* preview hover */
+                $(".templs_in li a").hover(
+                    function () {
+                        var previewurl = $(this).parent().attr("data-preview-image");
+                        $(".previmg_cont").addClass('active').find('img').attr('src', previewurl);
+                    },
+                    function () {
+                    }
+                );
+
+                $(".advanced_templates_block").hover(
+                    function () {
+                        $(".previmg_cont").css("visibility", "visible");
+                    },
+                    function () {
+                        $(".previmg_cont").removeClass('active');
+                    }
+                );
+
+                $('.templs_in').jScrollPane(
+                    {showArrows: true, autoReinitialise: true}
+                );
+                $('.advanced_templates_block .f_left').jScrollPane(
+                    {showArrows: true, autoReinitialise: true}
+                );
+
+                $('.mobile_testing i').click(function () {
+                    $('.mobile_testing i').removeClass('active');
+                    $(this).addClass('active');
+                    var gt3_showsize = $(this).attr('data-showsize');
+                    var preview_iframe = $('#iframe');
+                    var preview_iframe_url = $('#iframe').attr('src');
+                    preview_iframe.removeClass('size-desktop').removeClass('size-tablet').removeClass('size-mobile').addClass(gt3_showsize);
+                    //preview_iframe.attr('src', preview_iframe_url);
+                    if (gt3_showsize == 'size-desktop') {
+                        $('body').removeClass('size-preview-enable');
+                    } else {
+                        $('body').removeClass('size-preview-enable').addClass('size-preview-enable');
+                    }
+                });
+            });
+
+            $(window).resize(function () {
+
+            });
+        </script>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+//            ga('create', 'UA-76062518-1', 'auto');
+            ga('create','UA-76062518-1', 'auto', {
+                allowLinker: true
+            });
+            ga('require', 'linker');
+            ga('linker:autoLink', ['themeforest.net', 'preview.themeforest.net', 'gt3demo.com', 'gt3themes.com']);
+            ga('send', 'pageview');
+
+        </script>
+
+<!-- Facebook Pixel Code -->
+</head><body><div id="touchvpn_icon_container" class="disconnected" draggable="true" style="right: 0.78125000% !important; bottom: 2.04638472% !important;"><div id="touchvpn_status_icon" class="touchvpn_ru"><div class="touchvpn_icon_sign">Best choice for browsing</div></div><div id="touchvpn_icon_selector"><div class="touchvpn_country touchvpn_gb"><div class="touchvpn_icon_sign">Browse from United Kingdom</div></div><div class="touchvpn_country touchvpn_fr"><div class="touchvpn_icon_sign">Browse from France</div></div><div class="touchvpn_country touchvpn_nl"><div class="touchvpn_icon_sign">Browse from Netherlands</div></div><div class="touchvpn_country touchvpn_de"><div class="touchvpn_icon_sign">Browse from Germany</div></div></div></div><img height="1" width="1" style="display:none" src="./WordPress Themes   Website Templates_files/tr">
+
+<img height="1" width="1" style="display:none" src="./WordPress Themes   Website Templates_files/tr(1)">
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+        
+    
+
+    
+
+    
+        <div class="preview__header tfstyle">
+
+            <div class="preview__envato-logo">
+                <a href="http://themeforest.net/user/gt3themes/portfolio?ref=GT3themes">Envato Market</a>
+            </div>
+
+            <ul class="headlines">
+                <li id="theme_list">
+                    <a id="theme_select" href="http://gt3demo.com/?theme=Wicon%20WP#"><span class="fl">Wicon WP</span></a>
+
+                    <div class="advanced_templates_block" style="visibility: hidden;">
+                        <div class="f_left" style="overflow: hidden; padding: 0px; width: 247px;">
+                                                    <div class="jspContainer" style="width: 247px; height: 347px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 247px;"><div class="templs_li_block wp_section"><div class="templs_in jspScrollable" style="overflow: hidden; padding: 0px; width: 228px;" tabindex="0"><div class="jspContainer" style="width: 228px; height: 347px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 223px;"><ul><li data-preview-image="http://gt3demo.com/selector/items/sohopro_wp.jpg"><a data-tfitemid="20151221" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/sohopro-landing/,https://themeforest.net/item/creative-portfolio-wordpress-theme-soho-pro/20151221"><span class="fl">SohoPro </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/wizestore-wp.jpg"><a data-tfitemid="19999516" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/wizestore/,https://themeforest.net/item/woocommerce-multipurpose-responsive-wordpress-theme-wizestore/19999516"><span class="fl">Wizestore </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/pizzahit-wp.jpg"><a data-tfitemid="19889658" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/pizzahit/,https://themeforest.net/item/pizza-cafe-restaurant-wordpress-theme-pizzahit/19889658"><span class="fl">Pizzahit </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/wizephoto-wp.jpg"><a data-tfitemid="19653311" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/wizephoto-landing/,https://themeforest.net/item/photography-bradley-services-wordpress-theme-wizephoto/19653311"><span class="fl">Wizephoto </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/wizeedu-wp.jpg"><a data-tfitemid="19553294" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/wizeedu/,https://themeforest.net/item/education-courses-events-lms-wordpress-theme-wizeedu/19553294"><span class="fl">Wizeedu </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/wizelaw_wp.jpg"><a data-tfitemid="19363282" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/wizelaw/,https://themeforest.net/item/law-services-lawyer-attorney-business-wordpress-wizelaw/19363282"><span class="fl">Wizelaw </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/wicon-wp.jpg"><a data-tfitemid="19264931" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/wicon/,https://themeforest.net/item/mobile-wallet-application-wordpress-theme-wicon/19264931"><span class="fl">Wicon </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/grand_wp.jpg"><a data-tfitemid="18912277" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/grand/,https://themeforest.net/item/business-corporate-wordpress-theme-grand/18912277"><span class="fl">Grand </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/shutterbird_wp.jpg"><a data-tfitemid="18793248" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/shutterbird/,https://themeforest.net/item/photography-wordpress-theme-shutterbird-photography/18793248"><span class="fl">Shutterbird </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/johnblack_wp.jpg"><a data-tfitemid="18151772" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/johnblack-landing/,https://themeforest.net/item/photography-fullscreen-wordpress-theme-johnblack-photography/18151772"><span class="fl">JohnBlack </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/lawlions_wp.jpg"><a data-tfitemid="18060113" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/lawlions/,https://themeforest.net/item/law-lions-laywers-attorneys-business-wordpress-theme/18060113"><span class="fl">Lawlions </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/grandfolio_wp.jpg"><a data-tfitemid="17761302" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/grandfolio/,https://themeforest.net/item/photo-wordpress-theme-grand-folio/17761302"><span class="fl">Grand Folio </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/simplecafe_wp.jpg"><a data-tfitemid="17649483" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/simple-cafe/,https://themeforest.net/item/cafe-and-restaurant-wordpress-theme-simplecafe/17649483"><span class="fl">Simple Cafe </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/movement_wp.jpg"><a data-tfitemid="17399375" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/movement/,https://themeforest.net/item/portfolio-blog-wordpress-theme-movement/17399375"><span class="fl">Movement </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/moriarty_wp.jpg"><a data-tfitemid="17317349" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/moriarty/,https://themeforest.net/item/fullscreen-photo-wordpress-theme-moriarty-/17317349"><span class="fl">Moriarty </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/forty_wp.jpg"><a data-tfitemid="17211835" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/forty/,https://themeforest.net/item/crossfit-yoga-boxing-sport-wordpress-theme-forty/17211835"><span class="fl">Forty </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/etudes_wp.jpg"><a data-tfitemid="17129959" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/etudes/,https://themeforest.net/item/premium-photography-wordpress-theme-etudes/17129959"><span class="fl">Etudes </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/insquare_wp.jpg"><a data-tfitemid="16489806" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/insquare/,https://themeforest.net/item/life-style-blog-wordpress-theme-insquare/16489806"><span class="fl">Insquare </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/beyoutiful_wp.jpg"><a data-tfitemid="16882116" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/beyoutiful/,http://themeforest.net/item/spa-beauty-and-hair-salon-wordpress-theme-beyoutiful/16882116"><span class="fl">Beyoutiful </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/chantelle_wp.jpg"><a data-tfitemid="16174270" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/chantelle/,http://themeforest.net/item/photo-wordpress-theme-chantelle/16174270"><span class="fl">Chantelle </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/bricks_wp.jpg"><a data-tfitemid="16476435" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/bricks/,http://themeforest.net/item/construction-building-wordpress-theme-bricks/16476435"><span class="fl">Bricks </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/wonder_wp.jpg"><a data-tfitemid="15887124" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/wonder/,http://themeforest.net/item/photo-blog-wordpress-theme-wonder/15887124"><span class="fl">Wonder </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/fliper_wp.jpg"><a data-tfitemid="15144311" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/fliper/,http://themeforest.net/item/photo-fullscreen-wordpress-theme-fliper/15144311"><span class="fl">Fliper </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/whitespace_wp.jpg"><a data-tfitemid="14993262" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/whitespace/,http://themeforest.net/item/portfolio-wordpress-theme-whitespace/14993262"><span class="fl">WhiteSpace </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/solarwind_wp.jpg"><a data-tfitemid="14202716" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/solarwind/,http://themeforest.net/item/photography-wordpress-theme-solarwind/14202716"><span class="fl">SolarWind </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/elitemasters_wp.jpg"><a data-tfitemid="13787997" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/elitemasters-landing/,http://themeforest.net/item/business-multipurpose-wp-theme-elitemasters/13787997"><span class="fl">EliteMasters </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/pembrooke_wp.jpg"><a data-tfitemid="12920477" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/pembrooke/,http://themeforest.net/item/pembrooke-responsive-wordpress-blog-theme/12920477"><span class="fl">PemBrooke </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/hershel_wp.jpg"><a data-tfitemid="12850028" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/hershel_landing/,http://themeforest.net/item/hershel-flexible-multipurpose-wordpress-theme/12850028"><span class="fl">Hershel </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/knoxville_wp.jpg"><a data-tfitemid="12492614" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/knoxville/,http://themeforest.net/item/knoxville-responsive-wordpress-blog-theme/12492614"><span class="fl">Knoxville </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/groutek_wp.jpg"><a data-tfitemid="12048283" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/groutek/,http://themeforest.net/item/groutek-creative-business-wordpress-theme/12048283"><span class="fl">Groutek </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/goodwin_wp.jpg"><a data-tfitemid="11709544" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/goodwin/,http://themeforest.net/item/photography-video-goodwin-wordpress-theme/11709544"><span class="fl">Goodwin </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/bradford_wp.jpg"><a data-tfitemid="11268167" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/bradford/,http://themeforest.net/item/bradford-photographer-portfolio-wordpress-theme/11268167"><span class="fl">Bradford </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/canvas_wp.jpg"><a data-tfitemid="10508369" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/canvas/,http://themeforest.net/item/canvas-interior-furniture-portfolio-wp-theme/10508369"><span class="fl">Canvas </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/soho_wp.jpg"><a data-tfitemid="10020792" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/soho/,http://themeforest.net/item/soho-fullscreen-photo-video-wordpress-theme/10020792"><span class="fl">Soho </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/oyster_wp.jpg"><a data-tfitemid="8406045" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/oyster_landing/,http://themeforest.net/item/oyster-creative-photo-wordpress-theme/8406045"><span class="fl">Oyster </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/diamond_wp.jpg"><a data-tfitemid="9274644" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/diamond/,http://themeforest.net/item/diamond-photography-wordpress-theme/9274644"><span class="fl">Diamond </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/sherwood_wp.jpg"><a data-tfitemid="9562854" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/sherwood_landing/,http://themeforest.net/item/sherwood-one-page-and-multipage-wordpress-theme/9562854"><span class="fl">Sherwood </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/yorker_wp.jpg"><a data-tfitemid="8407908" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/yorker/,http://themeforest.net/item/yorker-business-wordpress-theme/8407908"><span class="fl">Yorker </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/healther_wp.jpg"><a data-tfitemid="8075315" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/healther/,http://themeforest.net/item/healther-medical-health-wordpress-theme/8075315"><span class="fl">Healther </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/fit_wp.jpg"><a data-tfitemid="7940206" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/fitplus/,http://themeforest.net/item/fit-multipurpose-sports-wordpress-theme/7940206"><span class="fl">Fit </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/flipstar_wp.jpg"><a data-tfitemid="7796312" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/flipstar/,http://themeforest.net/item/flipstar-creative-business-wordpress-theme/7796312"><span class="fl">Flipstar </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/marvel_wp.jpg"><a data-tfitemid="7571407" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/marvel/,http://themeforest.net/item/marvel-creative-portfolio-wordpress-theme/7571407"><span class="fl">Marvel </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/achromatic_wp.jpg"><a data-tfitemid="7361395" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/achromatic_landing/,http://themeforest.net/item/achromatic-business-wordpress-theme/7361395"><span class="fl">Achromatic </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/eclipse_wp.jpg"><a data-tfitemid="7181755" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/eclipse_landing/,http://themeforest.net/item/eclipse-photo-portfolio-wordpress-theme/7181755"><span class="fl">Eclipse </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/performer_wp.jpg"><a data-tfitemid="6757476" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/performer/,http://themeforest.net/item/performer-minimalistic-portfolio-wordpress-theme/6757476"><span class="fl">Performer </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/shopper_wp.jpg"><a data-tfitemid="6625922" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/shopper/,http://themeforest.net/item/shopper-multipurpose-woocommerce-wordpress-theme/6625922"><span class="fl">Shopper </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/quidditch_wp.jpg"><a data-tfitemid="6584983" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/quidditch/,http://themeforest.net/item/quidditch-one-page-wordpress-theme/6584983"><span class="fl">Quidditch </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/palette_wp.jpg"><a data-tfitemid="6332539" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/palette/,http://themeforest.net/item/palette-one-page-parallax-wordpress-theme/6332539"><span class="fl">Palette </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/trend_wp.jpg"><a data-tfitemid="6067534" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/trend/,http://themeforest.net/item/trend-flat-clean-wp-theme-pagebuilder/6067534"><span class="fl">Trend </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/mavericks_wp.jpg"><a data-tfitemid="6120353" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/mavericks/,http://themeforest.net/item/mavericks-business-portfolio-wordpress-theme/6120353"><span class="fl">Mavericks </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/frame_wp.jpg"><a data-tfitemid="5358164" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/frame_landing/,http://themeforest.net/item/frame-photography-minimalistic-wp-theme-/5358164"><span class="fl">Frame </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/interior_wp.jpg"><a data-tfitemid="5087475" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/interior/,http://themeforest.net/item/modern-interior-responsive-wordpress-theme/5087475"><span class="fl">Interior </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/galaxy_wp.jpg"><a data-tfitemid="4918118" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/galaxy,http://themeforest.net/item/galaxy-responsive-portfolio-wordpress-theme/4918118"><span class="fl">Galaxy </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/output_wp.jpg"><a data-tfitemid="4525865" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/output/,http://themeforest.net/item/output-responsive-multipurpose-wordpress-theme/4525865"><span class="fl">Output </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/point_wp.jpg"><a data-tfitemid="4319087" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/point/,http://themeforest.net/item/point-business-responsive-wp-theme/4319087"><span class="fl">Point </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/yellow_wp.jpg"><a data-tfitemid="4066662" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/yellowproject/,http://themeforest.net/item/yellowproject-multipurpose-retina-wp-theme/4066662"><span class="fl">YellowProject </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/cleanspace_wp.jpg"><a data-tfitemid="3776000" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/cleanspace/,http://themeforest.net/item/cleanspace-retina-ready-business-wp-theme/3776000"><span class="fl">CleanSpace </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/showroom_wp.jpg"><a data-tfitemid="3473628" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/showroom/,http://themeforest.net/item/showroom-portfolio-retina-ready-wp-theme/3473628"><span class="fl">Showroom </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/hq_wp.jpg"><a data-tfitemid="3200962" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/hq,http://themeforest.net/item/hq-photography-responsive-wp-theme/3200962"><span class="fl">HQ </span><span class="fr show_product_type">WP</span></a></li><li data-preview-image="http://gt3demo.com/selector/items/jd_wp.jpg"><a data-tfitemid="2570713" href="http://gt3demo.com/?theme=Wicon%20WP#" rel="http://gt3demo.com/wp/jd/,http://themeforest.net/item/jdoe-responsive-photography-wordpress-theme/2570713"><span class="fl">J.Doe Photography</span><span class="fr show_product_type">WP</span></a></li></ul></div><div class="jspVerticalBar"><div class="jspCap jspCapTop"></div><a class="jspArrow jspArrowUp jspDisabled"></a><div class="jspTrack" style="height: 347px;"><div class="jspDrag" style="height: 50px;"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div><a class="jspArrow jspArrowDown"></a><div class="jspCap jspCapBottom"></div></div></div></div></div></div></div></div>
+                        <div class="c_lear"></div>
+                    </div>
+                    <div class="previmg_cont"><img src="http://gt3demo.com/?theme=Wicon%20WP" alt=""></div>
+                </li>
+            </ul>
+
+            <div class="preview__actions">
+                <div class="preview__action--buy">
+                    <a href="http://1.envato.market/c/296172/275988/4415?u=https://themeforest.net/item/mobile-wallet-application-wordpress-theme-wicon/19264931" class="e-btn--3d -color-primary purch_no_design">Buy now</a>
+                    <!--a href="https://themeforest.net/item/mobile-wallet-application-wordpress-theme-wicon/19264931?ref=GT3themes&license=regular&open_purchase_for_item_id=19264931" class="e-btn--3d -color-primary purch_no_design">Buy now</a-->
+                </div>
+
+                <div class="preview__action--close">
+                    <a class="remove_no_design" href="http://gt3demo.com/wp/wicon/">
+                        <i class="e-icon -icon-cancel"></i><span>Remove Frame</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <iframe class="full-screen-preview__frame gt3ifr" id="iframe" src="./WordPress Themes   Website Templates_files/saved_resource.html" name="preview-frame" frameborder="0" noresize="noresize" data-view="fullScreenPreview" height="512">
+        </iframe>
+
+    
+    <div style="display: none;">
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 977583563;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="./WordPress Themes   Website Templates_files/conversion.js.Без названия">
+        </script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./WordPress Themes   Website Templates_files/saved_resource(1).html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>
+        <noscript>
+            &lt;div style="display:inline;"&gt;
+                &lt;img height="1" width="1" style="border-style:none;" alt=""
+                     src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/977583563/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+            &lt;/div&gt;
+        </noscript>
+    </div>
+    
+    
+    </body></html>
