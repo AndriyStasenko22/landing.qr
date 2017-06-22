@@ -22,16 +22,16 @@ html
 									.header-list-item.wow.fadeIn(data-wow-delay="0.5s") #[span 1] всегда с клиентом
 								li
 									.header-list-item.wow.fadeIn(data-wow-delay="1.3s") #[span 2] возможность напомнить о себе
-									#[.header-list-line.wow.drawLine(data-wow-delay="0.9s")]
+									| #[.header-list-line.wow.drawLine(data-wow-delay="0.9s")]
 								li
 									.header-list-item.wow.fadeIn(data-wow-delay="2.2s") #[span 3] клиент всегда вкурсе о накопленных средствах
-									#[.header-list-line.wow.drawLine(data-wow-delay="1.7s")]
+									| #[.header-list-line.wow.drawLine(data-wow-delay="1.7s")]
 								li
 									.header-list-item.wow.fadeIn(data-wow-delay="3.1s") #[span 4] быстрая окупаемость
-									#[.header-list-line.wow.drawLine(data-wow-delay="2.6s")]
+									| #[.header-list-line.wow.drawLine(data-wow-delay="2.6s")]
 								li
 									.header-list-item.wow.fadeIn(data-wow-delay="4.1s") #[span 5] реферальная система
-									#[.header-list-line.wow.drawLine(data-wow-delay="3.6s")]
+									| #[.header-list-line.wow.drawLine(data-wow-delay="3.6s")]
 
 		// головне меню
 		section.navbar
@@ -46,8 +46,8 @@ html
 								li: a.active(href='header') ГЛАВНАЯ
 								li: a(href='.whatsit') ПРЕИМУЩЕСТВА
 								li: a(href='.services') ФУНКЦИОНАЛЬНОСТЬ
-								li: a(href='#') ДЕМО-ВЕРСИЯ
-								li: a(href='#') КОНТАКТЫ
+								li: a(href='.services') ДЕМО-ВЕРСИЯ
+								li: a(href='.services') КОНТАКТЫ
 
 		// переваги
 		section.whatsit
@@ -84,7 +84,7 @@ html
 								h1.title Возможности системы
 						.col-xs-6.col-sm-6.col-md-6.col-lg-6
 							.whatsit_foto
-								img(src="img/baners/message.png")
+								img(src="../img/news-block.png")
 
 						.col-xs-6.col-sm-6.col-md-6.col-lg-6
 							ul.wrap_list
@@ -151,7 +151,70 @@ html
 									li новостная лента;
 									li информация о компании, адреса и телефоны филиалов, фотографии, адреса сайтов.
 							.application_button
-								a(href='#'): img(src='img/google-play-badge.png')						
+								a(href='#'): img(src='img/google-play-badge.png')
+		section.slider_phone
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-12.col-sm-12.col-md-12.col-lg-12
+							.wrap_title
+								h1.title Скриншоты приложения
+							.center_phone
+								.phone_slider.owl-carousel
+									img(src="../img/Screenshots/referal.png")
+									img(src="../img/Screenshots/referal_qr.png")
+									img(src="../img/Screenshots/card.png")
+									img(src="../img/Screenshots/card.png")
+							.phone_slider_button
+								.btn_prev: i.fa.fa-angle-left
+								.btn_next: i.fa.fa-angle-right
+		section.admin-panel
+			.container-fluid
+				.container_wrap
+					.row
+						.col-xs-12.col-sm-12.col-md-12.col-lg-12
+							.wrap_title
+								h1.title Ваш личный кабинет
+								h3.short_info Возможности системы
+						.col-xs-12.col-sm-12.col-md-12.col-lg-12
+							.admin-panel-wrap
+								.admin-panel-block
+									.admin-panel-image
+										a.fancy(href="../img/admin/push.PNG"): img(src="../img/admin/push.PNG")
+									.admin-panel-info
+										.admin-panel-name
+											h4 Сообщения
+										.admin-panel-description
+											p.
+												Используйте для уведомления об акциях и напоминания клиенту о существовании мобильной карты.
+								.admin-panel-block
+									.admin-panel-image
+										a.fancy(href="../img/admin/news.PNG"): img(src="../img/admin/news.PNG")
+									.admin-panel-info
+										.admin-panel-name
+											h4 Новости
+										.admin-panel-description
+											p.
+												Публикуйте новости каждый день, напоминая клиентам о себе и мотивируя к покупкам
+								.admin-panel-block
+									.admin-panel-image
+										a.fancy(href="../img/admin/history.PNG"): img(src="../img/admin/history.PNG")
+									.admin-panel-info
+										.admin-panel-name
+											h4 Истории
+										.admin-panel-description
+											p.
+												Посмотрите детальную информацию о каждом клиенте и количество начисленных баллов
+								.admin-panel-block
+									.admin-panel-image
+										a.fancy(href="../img/admin/user.PNG"): img(src="../img/admin/user.PNG")
+									.admin-panel-info
+										.admin-panel-name
+											h4 Клиены
+										.admin-panel-description
+											p.
+												Общая информация об клиентах, статистика регистрации клиентов, детальная информация о балансе
+
 		// футер сайту
 		footer
 	script(src="js/libs.min.js")

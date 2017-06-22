@@ -2,13 +2,14 @@
 	margin-bottom: 0;
 	height: 70px;
 	line-height: 69px;
-	background-color: rgba(39,50,61, .3);
+	background-color: rgba(39,50,61, .6);
 	border-radius: 0px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
+	width: 100%;
+	z-index: 101;
 	transition: all 0.3s;
 	.container_wrap{
 		padding: 0 10%;
@@ -18,6 +19,7 @@
 	}
 	.menu{
 		float: right;
+		font-size: 0;
 		li{
 			display: inline-block;
 			a{
@@ -25,10 +27,16 @@
 				text-transform: uppercase;
 				padding: 0 10px;
 				display: inline-block;
+				font-size: 16px;
 				&:hover{
 					color: @base_color;
+					background-color: rgba(255,255,255, 0.1);
 				}
-			}
+				&.active{
+					color: @base_color;
+					background-color: rgba(255,255,255, 0.1);
+				}
+			}		
 		}
 	}
 }
