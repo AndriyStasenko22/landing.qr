@@ -1,5 +1,6 @@
 .slider_phone{
 	text-align: center;
+	background-color: #f5f5f5;
 	.phone_slider_button{
 		margin-top: 20px;
 	}
@@ -22,21 +23,37 @@
 	.btn_next{
 		margin-left: 30px;
 	}
-	.center_phone{
-		height: 511px;
-		background: url(../../img/nexux_template.png) top center no-repeat;
-		padding-top: 40px;
-		position: relative;
-		width: 281px;
-		display: inline-block;
-	}
 	.phone_slider{
+		position: relative;
+		padding-top: 40px;
+		width: 1095px;
+		margin: 0 auto;
+		z-index: 0;
+		&::before{
+			position: absolute;
+			display: block;
+			content: "";
+			top: 0;
+			left: 50%;
+			width: 280px;
+			height: 511px;
+			background: url(../../img/nexux_template.png) top center no-repeat;
+			margin-left: -140px;
+			z-index: 1;
+		}
 		.owl-stage-outer{
-			padding: 0 18px;
+			padding: 0 14px;
 		}
 		img{
 			width: 245px;
 			transition: all 0.3s;
 		}
+		.owl-item{
+			opacity: 0.04;
+			transition: all 0.3s;
+		}
+		// .owl-item.center{
+		// 	opacity: 1;
+		// }
 	}
 }

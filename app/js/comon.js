@@ -1,15 +1,27 @@
 $(document).ready(function() {
 	var header_height = $('header').outerHeight(); // висота шапки
-	var menu_height = $('.navbar').outerHeight(); // висота меню
+	var menu_height = $('.fixed_menu').outerHeight(); // висота меню
 	new WOW().init();
 
 	var phone_slider = $('.phone_slider');
 	phone_slider.owlCarousel({
-		items:1,
+		items:4,
 		loop:true,
+		center: true,
 		smartSpeed:550,
+		startPosition: 3,
+		onInitialized: function(event){
+			phone_slider.find('.owl-item.center').next('.owl-item.active').css('opacity', '0.2');
+			phone_slider.find('.owl-item.center').prev('.owl-item.active').css('opacity', '0.2');
+			phone_slider.find('.owl-item.center').css('opacity', '1');
+		},
+		onChanged: function(event){
+			$('.phone_slider .owl-item').css('opacity', '0.04');
+			$('.phone_slider .owl-item').eq(event.item.index).css('opacity', '1');
+			$('.phone_slider .owl-item').eq(event.item.index).next('.owl-item').css('opacity', '0.2');
+			$('.phone_slider .owl-item').eq(event.item.index).prev('.owl-item').css('opacity', '0.2');
+		}
 	});
-
 	// кнопки слайдер "Наша команда"
 	$('.phone_slider_button .btn_next').click(function() {
 		phone_slider.trigger('next.owl.carousel');
@@ -22,10 +34,10 @@ $(document).ready(function() {
 	$(window).scroll(function(event) {
 		onScroll();
 		if($(window).scrollTop() > header_height - menu_height){
-			$('.navbar').css('background-color', 'rgba(39,50,61, 1)');
+			$('.fixed_menu').css('background-color', 'rgba(39,50,61, 1)');
 		}
 		else{
-			$('.navbar').removeAttr('style');
+			$('.fixed_menu').removeAttr('style');
 		}
 	});
 
@@ -38,7 +50,7 @@ $(document).ready(function() {
 	});
 
 
- 	$('.fancy').fancybox();
+	$('.fancy').fancybox();
 });
 
 function onScroll(){
