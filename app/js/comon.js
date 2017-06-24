@@ -34,7 +34,12 @@ $(document).ready(function() {
 	$(window).scroll(function(event) {
 		onScroll();
 		if($(window).scrollTop() > header_height - menu_height){
-			$('.fixed_menu').css('background-color', 'rgba(39,50,61, 1)');
+			// $('.fixed_menu').css('background-color', 'rgba(39,50,61, 1)');
+			$('.fixed_menu').css({
+				'background-color': 'rgba(39,50,61, 1)',
+				'height': '60',
+				'line-height': '59px'
+			});
 		}
 		else{
 			$('.fixed_menu').removeAttr('style');
@@ -54,7 +59,7 @@ $(document).ready(function() {
 });
 
 function onScroll(){
-	var menu_height = $('.navbar').outerHeight();
+	var menu_height = $('.fixed_menu').outerHeight();
 	var scroll_top = $(window).scrollTop();
 	$(".menu a").each(function(){
 		var hash = $(this).attr("href");

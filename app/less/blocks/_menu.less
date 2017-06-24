@@ -1,6 +1,6 @@
 .fixed_menu{
-	height: 70px;
-	line-height: 69px;
+	height: 85px;
+	line-height: 84px;
 	background-color: rgba(39,50,61, .6);
 	border-radius: 0px;
 	position: fixed;
@@ -9,7 +9,7 @@
 	right: 0;
 	width: 100%;
 	z-index: 2; 
-	transition: all 0.3s;
+	transition: background-color 0.3s;
 	.container_wrap{
 		padding: 0 10%;
 	}
@@ -23,19 +23,29 @@
 			display: inline-block;
 			a{
 				color: #fff;
-				text-transform: uppercase;
 				padding: 0 10px;
 				display: inline-block;
 				font-size: 16px;
+				font-weight: 400;
+				font-family: @Roboto;
 				&:hover{
 					color: @base_color;
-					background-color: rgba(255,255,255, 0.1);
+					background-color: rgba(0,0,0, 0.4);
 				}
 				&.active{
 					color: @base_color;
-					background-color: rgba(255,255,255, 0.1);
+					// background-color: rgba(0,0,0, 0.4);
 				}
 			}		
 		}
+	}
+}
+
+
+
+.services{
+	border-bottom: 2px solid #e2e2e2;
+	.wrap_title{
+		text-align: left;
 	}
 }

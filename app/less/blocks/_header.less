@@ -1,62 +1,90 @@
 header{
-	height: 85vh;
 	background: url('../../img/main_top_bg.jpg') center center no-repeat;
 	background-size: cover;
+	position: relative;
+	&::before{
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0, 0.3);
+	}
 	.header_image{
-		transform: translateY(35%);
+		transform: translateY(30%);
 		text-align: center;
 		width: 50%;
 		margin: 0 auto;
 	}
 	.container_wrap{
 		color: #fff;
+		padding-top: 155px;
+	}
+	.header-description, .header-title{
+		text-align: center;
 	}
 	.header-title{
-		font-size: 55px;
-		text-align: center;
-		margin: 40px 0;
+		color: #fff;
+		font-size: 45px;
+		margin-top: 0;
+	}
+	.header-description{
+		font-family: @Roboto;
+		font-size: 13px;
+		font-weight: 400;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 3px;
 	}
 	.header-list{
+		// margin-top: 55%;
+		margin-top: 10%;
 		li{
-			margin-top: 25px;
-			font-size: 18px;
+			font-family: @Roboto-Light;
+			margin-top: 35px;
+			font-size: 22px;
 			position: relative;
-			line-height: 48px;
+			line-height: 48px;;
 			&:first-child{
-				line-height: 78px;
-				font-size: 24px;
-				span{ 
-					width: 70px;
-					height: 70px;
-					line-height: 68px;
-					vertical-align: middle;
-					font-size: 40px;
-					margin: 0 15px 0 0;
-				}
-			}
-			span{
-				display: inline-block;
-				height: 50px;
-				width: 50px;
-				border-radius: 50%;
-				border: 2px solid  #fff;
-				background-color: @base_color;
-				text-align: center;
-				line-height: 48px;
-				font-weight: bold;
-				font-size: 20px;
-				margin: 0 10px;
-				vertical-align: middle;
-			}
-			.header-list-line{
-				width: 2px;
-				height: 28px;
-				background-color: #fff;
-				position: absolute;
-				top: -27px;
-				left: 34px;
-			}
+				margin-top: 0;
+			// 	line-height: 78px;
+			// 	font-size: 24px;
+			// 	span{ 
+			// 		width: 70px;
+			// 		height: 70px;
+			// 		line-height: 68px;
+			// 		vertical-align: middle;
+			// 		font-size: 40px;
+			// 		margin: 0 15px 0 0;
+			// 	}
 		}
+		span{
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 2px solid  #fff;
+			background-color: @base_color;
+			text-align: center;
+			line-height: 48px;
+			font-weight: bold;
+			font-size: 20px;
+			margin: 0 10px;
+			vertical-align: middle;
+		}
+		.header-list-line{
+			width: 2px;
+			height: 28px;
+			background-color: #fff;
+			position: absolute;
+			top: -27px;
+			left: 34px;
+		}
+	}
+}
+.list_right{
+		text-align: right;
 	}
 }
 .drawLine {
@@ -79,9 +107,9 @@ header{
 		transform: translateY(-115%);
 	}
 	50%{
-		transform: translateY(43%);
+		transform: translateY(40%);
 	}
 	100%{
-		transform: translateY(35%);
+		transform: translateY(30%);
 	}
 }
