@@ -16,6 +16,22 @@
 	.navbar_logo{
 		float: left;
 	}
+	.navbar-toggle{
+		padding: 0;
+		height: 30px;
+		width: 30px;
+		margin: 14px 0;
+		border: 1px solid #fff;
+		text-align: center;
+		line-height: 28px;
+		color: #fff;
+	}
+	.navbar-collapse{
+		border-top-color: #fff;
+		padding: 0;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
 	.menu{
 		float: right;
 		font-size: 0;
@@ -39,11 +55,37 @@
 			}		
 		}
 	}
+	@media only screen and (max-width : 767px){
+		&{
+			background-color: rgb(39, 50, 61);
+			height: 60px;
+			line-height: 60px;
+			.menu{
+				padding: 0 20px;
+				float: none;
+				background-color: rgb(39, 50, 61);
+				li{
+					display: block;
+					line-height: 45px;
+					border-bottom: 1px solid #eee;
+					a{
+						display: block;
+					}
+					&:last-child{
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 
 
 .services{
+	&:nth-child(even){
+		background-color: #f5f5f5;
+	}
 	border-bottom: 2px solid #e2e2e2;
 	.wrap_title{
 		text-align: left;

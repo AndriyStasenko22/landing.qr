@@ -25,8 +25,7 @@
 	}
 	.phone_slider{
 		position: relative;
-		padding: 40px 0;
-		width: 1095px;
+		padding: 40px;
 		margin: 0 auto;
 		z-index: 0;
 		&::before{
@@ -35,25 +34,27 @@
 			content: "";
 			top: 0;
 			left: 50%;
+			transform: translateX(-50%);
 			width: 280px;
 			height: 511px;
-			background: url(../../img/nexux_template.png) top center no-repeat;
-			margin-left: -140px;
+			background: url(../img/nexux_template.png) top center no-repeat;
 			z-index: 1;
 		}
-		.owl-stage-outer{
-			padding: 0 13px;
-		}
 		img{
-			width: 245px;
+			width: 248px;
+			margin: 0 auto;
 			transition: all 0.3s;
 		}
 		.owl-item{
 			opacity: 0.04;
 			transition: all 0.3s;
 		}
-		// .owl-item.center{
-		// 	opacity: 1;
-		// }
+	}
+	@media only screen and (max-width : 767px){
+		&{
+			.phone_slider{
+				padding: 40px 2%;
+			}
+		}
 	}
 }

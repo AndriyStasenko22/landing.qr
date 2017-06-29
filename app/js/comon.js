@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 	var phone_slider = $('.phone_slider');
 	phone_slider.owlCarousel({
-		items:4,
+		// items: 5,
 		loop:true,
 		center: true,
 		smartSpeed:550,
@@ -20,20 +20,58 @@ $(document).ready(function() {
 			$('.phone_slider .owl-item').eq(event.item.index).css('opacity', '1');
 			$('.phone_slider .owl-item').eq(event.item.index).next('.owl-item').css('opacity', '0.2');
 			$('.phone_slider .owl-item').eq(event.item.index).prev('.owl-item').css('opacity', '0.2');
+		},
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items: 1,
+			},
+			768:{
+				items: 2,
+			},
+			1200:{
+				items: 3,
+			},
+			1400:{
+				items: 4,
+			},
+			1700:{
+				items: 5,
+			}
 		}
+
 	});
-	// кнопки слайдер "Наша команда"
-	$('.phone_slider_button .btn_next').click(function() {
-		phone_slider.trigger('next.owl.carousel');
-	});
-	$('.phone_slider_button .btn_prev').click(function() {
-		phone_slider.trigger('prev.owl.carousel');
-	});
+
+		// кнопки слайдер "Наша команда"
+		$('.phone_slider_button .btn_next').click(function() {
+			phone_slider.trigger('next.owl.carousel');
+		});
+		$('.phone_slider_button .btn_prev').click(function() {
+			phone_slider.trigger('prev.owl.carousel');
+		}); 
+
+		var admin_slider = $('.admin_slider');
+		admin_slider.owlCarousel({
+			items:1,
+			loop:true,
+			center: true,
+			// smartSpeed:550,
+			// dots: true
+		});
+
+	// // кнопки слайдер "Наша команда"
+	// $('.phone_slider_button .btn_next').click(function() {
+	// 	phone_slider.trigger('next.owl.carousel');
+	// });
+	// $('.phone_slider_button .btn_prev').click(function() {
+	// 	phone_slider.trigger('prev.owl.carousel');
+	// });
 	
 	// шапка сайту
-	$(window).scroll(function(event) {
-		onScroll();
-		if($(window).scrollTop() > header_height - menu_height){
+	if($(window).width() > 767){
+		$(window).scroll(function(event) {
+			onScroll();
+			if($(window).scrollTop() > header_height - menu_height){
 			// $('.fixed_menu').css('background-color', 'rgba(39,50,61, 1)');
 			$('.fixed_menu').css({
 				'background-color': 'rgba(39,50,61, 1)',
@@ -45,6 +83,7 @@ $(document).ready(function() {
 			$('.fixed_menu').removeAttr('style');
 		}
 	});
+	}
 
 	// навігація по сайту
 	$('.menu>li a').click(function(event) {

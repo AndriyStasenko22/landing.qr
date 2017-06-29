@@ -1,6 +1,7 @@
 body{
 	font-family: @Regular;
 	position: relative;
+	overflow-x: hidden;
 }
 
 ul, li{
@@ -29,9 +30,12 @@ img{
 		text-align: center;
 		margin-bottom: 60px;
 		.title{
-			font-size: 45px;
+			font-size: ~"calc(24px + 1.3vw)";
 			text-transform: uppercase;
 			margin: 0 0 50px;
+		}
+		.title_small{
+			font-size: ~"calc(18px + 1vw)";
 		}
 	}
 	.wrap_list{
