@@ -11,6 +11,7 @@
 		}
 	}
 	.application_function{
+		margin-left: 20px;	
 		font-size: 18px;
 		line-height: 26px;
 		list-style: disc;
@@ -30,5 +31,17 @@
 	.application_button a{
 		height: 60px;
 		display: inline-block;
+	}
+	@media only screen and (max-width : 767px){
+		&{
+			.application_info{
+				h4, .application_function{
+					font-size: 14px;
+				}
+			}
+			.application_button{
+				text-align: center;
+			}
+		}
 	}
 }

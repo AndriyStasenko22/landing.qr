@@ -28,14 +28,14 @@ img{
 	color: @whatsit_text_color;
 	.wrap_title{
 		text-align: center;
-		margin-bottom: 60px;
 		.title{
 			font-size: ~"calc(24px + 1.3vw)";
 			text-transform: uppercase;
-			margin: 0 0 50px;
+			margin: 0 0 1.5em;
 		}
 		.title_small{
 			font-size: ~"calc(18px + 1vw)";
+			margin-bottom: 1.5em;
 		}
 	}
 	.wrap_list{
@@ -46,7 +46,20 @@ img{
 	}
 	.wrap_info{
 		h4{
-			line-height: 26px;
+			line-height: 1.5em;
+			margin-bottom: 1em;
+			font-family: @Light;
+		}
+	}
+	.wrap_foto{
+		text-align: center;
+	}
+	@media only screen and (max-width : 767px){
+		&{
+			padding: 50px 0;
+			.wrap_info h4{
+				font-size: 14px;
+			}
 		}
 	}
 }
@@ -54,11 +67,11 @@ img{
 .base_list{
 	font-family: @Light;
 	li{
-		padding-left: 25px;
-		line-height: 26px;
 		font-size: 18px;
 		display: block;
 		position: relative;
+		padding-left: 25px;
+		line-height: 2em;
 		span{
 			font-weight: bold;
 		}
@@ -68,8 +81,11 @@ img{
 			background: #f3b460;
 			width: 7px;
 			height: 7px;
-			top: 8px;
-			left: 2px;
+			top: 0.8em;
+			left: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
 		}
 	}
 }
@@ -82,4 +98,5 @@ img{
 	background: url(../../img/baners/circles-25.jpg) center center no-repeat;
 	background-size: cover;
 	box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.25);
+	z-index: 1;
 }

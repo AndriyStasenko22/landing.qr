@@ -7,44 +7,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <!-- шапка сайту -->
-  <header>
-    <div class="container-fluid">
-      <div class="container_wrap">
-        <div class="row">
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <div class="row">
-              <div class="col-xs-12 col-sm-5">
-                <div data-wow-delay="0.5s" data-wow-duration="2s" class="header_image wow animImage"><img src="img/iphone-white-1.png"></div>
-              </div>
-              <div class="col-xs-12 col-sm-7">
-                <h1 class="header-title">Мобильная карта клиента</h1>
-                <h3 class="header-description">Лёгкая программа лояльности для Вашего бизнеса</h3>
-                <ul class="header-list">
-                  <li data-wow-delay="0.5s" class='wow fadeInRight'>
-                    <div class="header-list-item"><span>1</span> всегда с клиентом</div>
-                  </li>
-                  <li data-wow-delay="1s" class='wow fadeInRight'>
-                    <div class="header-list-item"><span>2</span> возможность напомнить о себе</div>
-                  </li>
-                  <li data-wow-delay="1.5s" class='wow fadeInRight'>
-                    <div class="header-list-item"><span>3</span> клиент всегда вкурсе о накопленных средствах</div>
-                  </li>
-                  <li data-wow-delay="2s" class='wow fadeInRight'>
-                    <div class="header-list-item"><span>4</span> быстрая окупаемость</div>
-                  </li>
-                  <li data-wow-delay="2.5s" class='wow fadeInRight'>
-                    <div class="header-list-item"><span>5</span> реферальная система</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- <header>
+<!--   <header>
     <div class="container-fluid">
       <div class="container_wrap">
         <div class="row">
@@ -83,34 +46,93 @@
       </div>
     </div>
   </header> -->
-  <!-- головне меню -->
-  <section class="fixed_menu">
+
+  <!-- шапка сайту -->
+  <header>
     <div class="container-fluid">
       <div class="row">
+       <div class="base_menu">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-
-         <div class="navbar-header">
+          <!-- <div class="row"> -->
           <div class="navbar_logo">
-           <a href="index.html" class="logo"><img src="img/logo.png"></a>
-         </div>
-         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mob_menu">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+          </div>
+          <button type="button" class="navbar-toggle mob_button" data-toggle="collapse" data-target="#mob_menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+          <ul class="menu">
+            <li><a href="header" class="active">Главная</a></li>
+            <li><a href=".whatsit">Преимущества</a></li>
+            <li><a href=".services">Функциональность</a></li>
+            <li><a href=".services">Демо-версия</a></li>
+            <li><a href=".services">Контакты</a></li>
+          </ul>
+        </div>
       </div>
+    </div>
+    <!-- </div> -->
+    <div class="container_wrap">
+      <div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5">
+              <div data-wow-delay="0.5s" data-wow-duration="2s" class="header_image wow animImage"><img src="img/iphone-white-1.png"></div>
+            </div>
+            <div class="col-xs-12 col-sm-7">
+              <h1 class="header-title">Мобильная карта клиента</h1>
+              <h3 class="header-description">Лёгкая программа лояльности для Вашего бизнеса</h3>
+              <ul class="header-list">
+                <li data-wow-delay="0.5s" class='wow fadeInRight'>
+                  <div class="header-list-item"><span>1</span> всегда с клиентом</div>
+                </li>
+                <li data-wow-delay="1s" class='wow fadeInRight'>
+                  <div class="header-list-item"><span>2</span> возможность напомнить о себе</div>
+                </li>
+                <li data-wow-delay="1.5s" class='wow fadeInRight'>
+                  <div class="header-list-item"><span>3</span> клиент всегда вкурсе о накопленных средствах</div>
+                </li>
+                <li data-wow-delay="2s" class='wow fadeInRight'>
+                  <div class="header-list-item"><span>4</span> быстрая окупаемость</div>
+                </li>
+                <li data-wow-delay="2.5s" class='wow fadeInRight'>
+                  <div class="header-list-item"><span>5</span> реферальная система</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-      <div class="collapse navbar-collapse" id="mob_menu">
-        <ul class="menu">
-         <li><a href="header" class="active">Главная</a></li>
-         <li><a href=".whatsit">Преимущества</a></li>
-         <li><a href=".services">Функциональность</a></li>
-         <li><a href=".services">Демо-версия</a></li>
-         <li><a href=".services">Контакты</a></li>
-       </ul>
-     </div>
-   </div>
- </div>
-</div>
+<!-- головне меню -->
+<section class="fixed_menu fadeInDown">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="navbar-header">
+          <div class="navbar_logo">
+            <a href="index.html" class="logo"><img src="img/logo.png"></a>
+          </div>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mob_menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mob_menu">
+          <ul class="menu">
+            <li><a href="header" class="active">Главная</a></li>
+            <li><a href=".whatsit">Преимущества</a></li>
+            <li><a href=".services">Функциональность</a></li>
+            <li><a href=".application">Демо-версия</a></li>
+            <li><a href=".contacts">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- переваги-->
 <section class="whatsit container_wrap">
   <div class="container-fluid">
@@ -120,31 +142,36 @@
           <div class="col-xs-12 col-sm-12">
             <div class="wrap_title">
               <h1 class="title">Будьте современными</h1>
-              <h3 class="short_info">Смените пластиковые карты на мобильную версию</h3>
+              <h3 class="title_small">Смените пластиковые карты на мобильную версию</h3>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <ul class="whatsit_list">
-              <li>Всегда под рукой у ваших клиентов</li>
-              <li><span>Повышайте свой имидж</span> предоставляя клиенту новый сервис</li>
-              <li><span>Экономически выгоднее</span> дисконтной программы</li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="whatsit_foto"><img src="img/baners/whatsit.png"></div>
-          </div>
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-            <ul class="whatsit_list">
-              <li>Дает возможность <span>выделиться на фоне конкурентов</span></li>
-              <li>Включает в себя дополнительный канал коммуникации с клиентами</li>
-              <li>Создает <span>современный и технологичный образ</span></li>
-            </ul>
+          <div class="col-xs-12 col-sm-12">
+            <div class="whatsit_wrap">
+              <div class="whatsit_item">
+                <ul class="whatsit_list">
+                  <li>Всегда под рукой у ваших клиентов</li>
+                  <li><span>Повышайте свой имидж</span> предоставляя клиенту новый сервис</li>
+                  <li><span>Экономически выгоднее</span> дисконтной программы</li>
+                </ul>
+              </div>
+              <div class="whatsit_item">
+                <div class="wrap_foto"><img src="img/baners/whatsit.png" alt=""></div>
+              </div>
+              <div class="whatsit_item">
+                <ul class="whatsit_list">
+                  <li>Дает возможность <span>выделиться на фоне конкурентов</span></li>
+                  <li>Включает в себя дополнительный канал коммуникации с клиентами</li>
+                  <li>Создает <span>современный и технологичный образ</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- возможности -->
 <section class="services container_wrap">
   <div class="container-fluid">
@@ -152,7 +179,7 @@
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="row">
           <div class="col-xs-12 col-sm-6">
-            <div class="whatsit_foto"><img src="../img/news-block.png"></div>
+            <div class="wrap_foto"><img src="../img/news-block.png"></div>
           </div>
           <div class="col-xs-12 col-sm-6">
             <div class="wrap_title">
@@ -174,87 +201,17 @@
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="row">
-<!--  <div class="col-xs-12 col-sm-12">
-<div class="wrap_title">
-<h1 class="title">Возможности системы</h1>
-</div>
-</div> -->
-<div class="col-xs-12 col-sm-6">
-  <div class="wrap_title">
-    <h1 class='title_small'>Превращайте новых клиентов в постоянных покупателей</h1>
-  </div>
-  <div class="wrap_info">
-    <h4>Система поможет удержать покупателей и позволит увеличить количество постоянных клиентов.</h4>
-    <h4>Вы можете давать своим клиентам скидку или начислять бонусные баллы на следующее посещение, а также специальные акционные предложения.</h4>
-    <!-- <h4>Самые актуальные и интересные предложения поступят в телефон клиента мгновенно.</h4> -->
-  </div>
-</div>
-<div class="col-xs-12 col-sm-6">
-  <div class="whatsit_foto"><img src="../img/news-block.png"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="services container_wrap">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <div class="row">
-<!--  <div class="col-xs-12 col-sm-12">
-<div class="wrap_title">
-<h1 class="title">Возможности системы</h1>
-</div>
-</div> -->
-<div class="col-xs-12 col-sm-6">
-  <div class="whatsit_foto"><img src="../img/news-block.png"></div>
-</div>
-<div class="col-xs-12 col-sm-6">
-  <div class="wrap_title">
-    <h1 class='title_small'>Будьте постоянно в контакте с Вашими клиентами</h1>
-  </div>
-  <div class="wrap_info">
-    <h4>Автоматически напоминайте клиентам о Ваших новостях, акциях и специальных предложениях</h4>
-    <h4>Просто напишите сообщение и все Вашиы клиент мгновенно получит его в формате push-уведомления!</h4>
-    <h4>Простой и бесплатный способ информирования о маркетинговых акциях в виде push-нотификаций.</h4>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- що отримаєте -->
-<section class="products container_wrap">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <div class="row">
-         <!--  <div class="col-xs-12 col-sm-6">
-            <div class="whatsit_foto">
-              <img src="img/mockup.png">
-            </div>
-          </div> -->
-          <div class="col-xs-12 col-sm-6">
-            <div class="wrap_title">
-              <h1 class="title">Что вы получаете</h1>
-            </div>
-            <ul class="wrap_list">
-              <li>
-                <h3>Мобильное приложение для клиентов Вашего заведения</h3>
-              </li>
-              <li>
-                <h3>Мобильное приложение для обслуживающего персонала</h3>
-              </li>
-              <li>
-                <h3>Административная панель через web-приложение</h3>
-              </li>
-            </ul>
+          <div class="col-xs-12 col-sm-6 col-sm-push-6">
+            <div class="wrap_foto"><img src="../img/news-block.png"></div>
           </div>
-          <div class="col-xs-12 col-sm-6">
-            <div class="whatsit_foto">
-              <img src="img/mockup.png">
+          <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+            <div class="wrap_title">
+              <h1 class='title_small'>Превращайте новых клиентов в постоянных покупателей</h1>
+            </div>
+            <div class="wrap_info">
+              <h4>Система поможет удержать покупателей и позволит увеличить количество постоянных клиентов.</h4>
+              <h4>Вы можете давать своим клиентам скидку или начислять бонусные баллы на следующее посещение, а также специальные акционные предложения.</h4>
+              <h4>Самые актуальные и интересные предложения поступят в телефон клиента мгновенно.</h4>
             </div>
           </div>
         </div>
@@ -262,6 +219,55 @@
     </div>
   </div>
 </section>
+<section class="services container_wrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="wrap_foto"><img src="../img/news-block.png"></div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="wrap_title">
+              <h1 class='title_small'>Будьте постоянно в контакте с Вашими клиентами</h1>
+            </div>
+            <div class="wrap_info">
+              <h4>Автоматически напоминайте клиентам о Ваших новостях, акциях и специальных предложениях</h4>
+              <h4>Просто напишите сообщение и все Вашиы клиент мгновенно получит его в формате push-уведомления!</h4>
+              <h4>Простой и бесплатный способ информирования о маркетинговых акциях в виде push-нотификаций.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- що отримаєте -->
+<section class="products container_wrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="wrap_title">
+              <h1 class="title">Что вы получаете</h1>
+            </div>
+            <ul class="wrap_list">
+              <li>Мобильное приложение для клиентов Вашего заведения</li>
+              <li>Мобильное приложение для обслуживающего персонала</li>
+              <li>Административная панель через web-приложение</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="wrap_foto"><img src="img/mockup.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- сфера застосування -->
 <section class="scope container_wrap">
   <div class="container-fluid">
@@ -275,87 +281,93 @@
           </div>
           <div class="col-xs-12 col-sm-12">
             <div class="scope-wrap">
-              <div class="scope_colum">
+              <div class="scope_item">
                 <div class="scope_box">
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-13.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Розничные магазины</span>
-                    </div>
+                  <div class="scope_img">
+                    <img src="img/desk-13.png" alt="">
                   </div>
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-14.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Туризм и транспорт</span>
-                    </div>
-                  </div>
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-6.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Бассейны и спортклубы</span>
-                    </div>
+                  <div class="scope_text">
+                    <span>Розничные магазины</span>
                   </div>
                 </div>
               </div>
-              <div class="scope_colum">
+              <div class="scope_item">
                 <div class="scope_box">
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-2.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Медицинские учреждения</span>
-                    </div>
+                  <div class="scope_img">
+                    <img src="img/desk-14.png" alt="">
                   </div>
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-5.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Автомойки</span>
-                    </div>
-                  </div>
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-4.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Автосервисы</span>
-                    </div>
+                  <div class="scope_text">
+                    <span>Туризм и транспорт</span>
                   </div>
                 </div>
               </div>
-              <div class="scope_colum">
+              <div class="scope_item">
                 <div class="scope_box">
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-10.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Кафе и рестораны</span>
-                    </div>
+                  <div class="scope_img">
+                    <img src="img/desk-6.png" alt="">
                   </div>
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-11.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Гостиницы</span>
-                    </div>
+                  <div class="scope_text">
+                    <span>Бассейны и спортклубы</span>
                   </div>
-                  <div class="scope_item">
-                    <div class="scope_img">
-                      <img src="img/desk-1.png" alt="">
-                    </div>
-                    <div class="scope_text">
-                      <span>Салоны красоты</span>
-                    </div>
+                </div>
+              </div>
+              <div class="scope_item">
+                <div class="scope_box">
+                  <div class="scope_img">
+                    <img src="img/desk-2.png" alt="">
+                  </div>
+                  <div class="scope_text">
+                    <span>Медицинские учреждения</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scope_item">
+                <div class="scope_box">
+                  <div class="scope_img">
+                    <img src="img/desk-5.png" alt="">
+                  </div>
+                  <div class="scope_text">
+                    <span>Автомойки</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scope_item">
+                <div class="scope_box">
+                  <div class="scope_img">
+                    <img src="img/desk-4.png" alt="">
+                  </div>
+                  <div class="scope_text">
+                    <span>Автосервисы</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scope_item">
+                <div class="scope_box">
+                  <div class="scope_img">
+                    <img src="img/desk-10.png" alt="">
+                  </div>
+                  <div class="scope_text">
+                    <span>Кафе и рестораны</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scope_item">
+                <div class="scope_box">
+                  <div class="scope_img">
+                    <img src="img/desk-11.png" alt="">
+                  </div>
+                  <div class="scope_text">
+                    <span>Гостиницы</span>
+                  </div>
+                </div>
+              </div>
+              <div class="scope_item">
+                <div class="scope_box">
+                  <div class="scope_img">
+                    <img src="img/desk-1.png" alt="">
+                  </div>
+                  <div class="scope_text">
+                    <span>Салоны красоты</span>
                   </div>
                 </div>
               </div>
@@ -366,42 +378,38 @@
     </div>
   </div>
 </section>
+
 <!-- як працює система -->
 <section class="system_work container_wrap">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="row">
-         <!--  <div class="col-xs-12 col-sm-6">
-            <div class="whatsit_foto">
-              <img src="img/mockup.png">
-            </div>
-          </div> -->
           <div class="col-xs-12 col-sm-12">
             <div class="wrap_title">
               <h1 class="title">Как работает система?</h1>
             </div>
-            <div class="whatsit_foto">
-              <!-- <img src="img/mockup.png"> -->
+            <div class="wrap_foto">
               <img src="img/scheme.png">
             </div>
-            <!-- <div class="wrap_title">
-              <h3 class="short_info">Для использования системы клиетну будет достаточно предъявить менеджеру электронную карту в своем телефоне – он считает сканером двухмерный код, а клиент получит скидки на товары и услуги, а также продолжит накопление бонусов для дальнейших покупок.</h3>
-            </div> -->
+            <div class="wrap_title">
+              <h4 class="short_info">Для использования системы клиетну будет достаточно предъявить менеджеру электронную карту в своем телефоне – он считает сканером двухмерный код, а клиент получит скидки на товары и услуги, а также продолжит накопление бонусов для дальнейших покупок.</h4>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- CompLifeQR -->
+
+<!-- додаток "CompLifeQR" -->
 <section class="application container_wrap">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="row">
           <div class="col-xs-12 col-sm-6">
-            <div class="whatsit_foto"><img src="img/baners/message.png"></div>
+            <div class="wrap_foto"><img src="img/baners/message.png"></div>
           </div>
           <div class="col-xs-12 col-sm-6">
             <div class="application_info">
@@ -432,7 +440,8 @@
     </div>
   </div>
 </section>
-<!-- </section> -->
+
+<!-- скріншоти додатка -->
 <section class="slider_phone container_wrap">
   <div class="container-fluid">
     <div class="row">
@@ -462,6 +471,8 @@
     </div>
   </div>
 </section>
+
+<!-- скріншоти "Панель адміністратора" -->
 <section class="admin-panel container_wrap">
   <div class="container-fluid">
     <div class="row">
@@ -517,16 +528,6 @@
                   <img src="img/admin/list_clients_s.PNG">
                 </a>
               </div>
-              <!-- <div class="admin-panel-image">
-                <a href="img/admin/m" class="fancy">
-                  <img src="img/admin/m">
-                </a>
-              </div>
-              <div class="admin-panel-image">
-                <a href="../img/admin/push.PNG" class="fancy">
-                <img src="../img/admin/push.PNG">
-                </a>
-              </div> -->
             </div>
           </div>
         </div>
@@ -535,9 +536,82 @@
   </div>
 </section>
 
+<section class="contacts">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="contacts_block">
+              <div class="wrap_title clearfix">
+                <h1 class="title_small">Контактная информация</h1>
+              </div>
+              <div class="contacts_content">
+                <div class="location">
+                  <div class="location_item">
+                    <p class="logo"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
+                    <h4 class="location_title">Адрес</h4>
+                    <p class="info">29000, Украина<br>г. Хмельницкий, ул. Пересипкина, д.8</p>
+                  </div>
+                  <div class="location_item">
+                    <p class="logo"><i class="fa fa-phone" aria-hidden="true"></i></p>
+                    <h4 class="location_title">телефон</h4>
+                    <p class="info">+38 (0382) 65-41-05</p>
+                    <p class="info">+38 (0382) 72-03-37</p>
+                    <p class="info">+38 (097) 745-29-82</p>
+                  </div>
+                  <div class="location_item">
+                    <p class="logo"><i class="fa fa-envelope-o" aria-hidden="true"></i></p>
+                    <h4 class="location_title">Email</h4>
+                    <p class="info">office@complife.ua</p>
+                  </div>
+                </div>
+                  <!-- <section class='map clearfix'>
+                    <div class="overlay_map" onClick="style.pointerEvents='none'"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.625552880163!2d26.995279916044208!3d49.41598647934606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47320644d645f977%3A0x19fdb65cb1c08b54!2z0LLRg9C70LjRhtGPINCf0LXRgNC10YHQuNC_0LrRltC90LAsIDgsINCl0LzQtdC70YzQvdC40YbRjNC60LjQuSwg0KXQvNC10LvRjNC90LjRhtGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1496738088506" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </section> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="contacts_block contacts_right">
+                <div class="wrap_title clearfix">
+                  <h1 class="title_small">Оставьте заявку</h1>
+                  <div class="contacts_content">
+                   <div class="wrap_info">
+                    <h4>оставьте заявку и мы свяжемся с Вами</h4>
+                  </div>
+                  <form action="" class='contacts_form'>
+                    <input type="text" placeholder='Ваше имя'>
+                    <input type="text" placeholder='Ваш e-mail'>
+                    <input type="text" placeholder='Ваш телефон'>
+                    <textarea name="" placeholder='Ваше сообщение'></textarea>
+                    <button>Написать нам</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- футер сайту-->
-<footer></footer>
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12">
+            &copy Copyright 2016-2017 CompLife.in.ua
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 <script src="js/libs.min.js"></script>
 <script src="js/comon.js"></script>

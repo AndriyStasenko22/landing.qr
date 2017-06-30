@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	var header_height = $('header').outerHeight(); // висота шапки
 	var menu_height = $('.fixed_menu').outerHeight(); // висота меню
+	var basemenu_height = $('.base_menu').outerHeight(); // висота меню
 	new WOW().init();
 
 	var phone_slider = $('.phone_slider');
 	phone_slider.owlCarousel({
-		// items: 5,
 		loop:true,
 		center: true,
 		smartSpeed:550,
@@ -69,28 +69,36 @@ $(document).ready(function() {
 	
 	// шапка сайту
 	if($(window).width() > 767){
+		var flag = true;
 		$(window).scroll(function(event) {
 			onScroll();
-			if($(window).scrollTop() > header_height - menu_height){
-			// $('.fixed_menu').css('background-color', 'rgba(39,50,61, 1)');
-			$('.fixed_menu').css({
-				'background-color': 'rgba(39,50,61, 1)',
-				'height': '60',
-				'line-height': '59px'
-			});
-		}
-		else{
-			$('.fixed_menu').removeAttr('style');
-		}
-	});
+			if($(window).scrollTop() > basemenu_height && flag){
+				flag = false;
+				$('.fixed_menu').css('display','block').addClass('animated');
+			}
+			if($(window).scrollTop() < basemenu_height && !flag){
+				$('.fixed_menu').css('display','none').removeClass('animated');
+				flag = true;
+			}
+		});
+		// console.log('1');
 	}
 
+	$('.base_menu .mob_button').click(function(event) {
+		$('.base_menu .menu').slideToggle('slow');
+	});
 	// навігація по сайту
 	$('.menu>li a').click(function(event) {
 		event.preventDefault();
 		var block = $(this).attr('href');
-		var block_position = $(block).offset().top - menu_height;
+		if($(window).width() > 767){
+			var block_position = $(block).offset().top - menu_height;
+		}
+		else{
+			var block_position = $(block).offset().top;
+		}
 		$('html, body').animate({scrollTop : block_position}, 800);
+		console.log(block);
 	});
 
 
@@ -100,12 +108,12 @@ $(document).ready(function() {
 function onScroll(){
 	var menu_height = $('.fixed_menu').outerHeight();
 	var scroll_top = $(window).scrollTop();
-	$(".menu a").each(function(){
+	$(".fixed_menu .menu a").each(function(){
 		var hash = $(this).attr("href");
 		var target = $(hash);
 		var position = target.position().top - menu_height;
 		if (position  <= scroll_top && position  + target.outerHeight() > scroll_top) {
-			$(".menu a.active").removeClass("active");
+			$(".fixed_menu .menu a.active").removeClass("active");
 			$(this).addClass("active");
 		} else {
 			$(this).removeClass("active");

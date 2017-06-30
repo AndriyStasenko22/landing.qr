@@ -1,31 +1,48 @@
 .scope{
 	.background();
 	box-shadow: 0px 6px 10px 0px rgba(0,0,0, 1);
-	.scope_colum, .scope_item, .scope-wrap{
+	.scope_box, .scope_item, .scope-wrap{
 		display: flex;
 	}
 	.scope-wrap{
-		flex-wrap: wrap;
+		flex-flow: row wrap;
 		justify-content: space-around;
 	}
-	.scope_colum{
+	.scope_item{
 		width: 31%;
 		justify-content: center;
 	}
-	.scope_item{
+	.scope_box{
+		font-size: 20px;
+		width: 70%;
 		align-items: center;
 	}
-	.scope_box{
-		display: inline-block;
-	}
 	.scope_img{
-		margin: 30px 0;
+		width: 25%;
+		margin: 1.5em 0;
 		margin-right: 20px;
-
 	}
 	.scope_text{
-		font-size: 19px;
+		width: 60%;
 		font-weight: 200;
 		color: #555;
+	}
+	@media only screen and (max-width : 1200px){
+		&{
+			.scope_item{
+				width: 45%;
+			}
+		}
+	}
+	@media only screen and (max-width : 600px){
+		&{
+			.scope_item{
+				width: 100%;
+				.scope_box{
+					width: 90%;
+					font-size: 16px;
+				}
+			}
+		}
 	}
 }
